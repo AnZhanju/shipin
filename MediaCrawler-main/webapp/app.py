@@ -19,7 +19,7 @@ from tools import utils
 import config
 
 # 设置模板目录的绝对路径
-app = Flask(__name__, template_folder=os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'templates'))
+app = Flask(__name__, template_folder=os.path.join(os.getcwd(), 'MediaCrawler-main', 'templates'))
 app.config['SECRET_KEY'] = 'your-secret-key-here'
 app.config['UPLOAD_FOLDER'] = 'downloads'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB
