@@ -19,7 +19,7 @@ from tools import utils
 import config
 
 # 设置模板目录的绝对路径
-app = Flask(__name__, template_folder=os.path.join(os.getcwd(), 'MediaCrawler_main', 'templates'))
+app = Flask(__name__, template_folder=os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'templates'))
 app.config['SECRET_KEY'] = 'your-secret-key-here'
 app.config['UPLOAD_FOLDER'] = 'downloads'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB
@@ -269,7 +269,7 @@ async def crawl_video(platform, params):
 
 @app.route('/')
 def index():
-    return render_template('index.html', supported_platforms=SUPPORTED_PLATFORMS)
+    return render_template('index.html')
 
 @app.route('/crawl', methods=['POST'])
 def crawl():
