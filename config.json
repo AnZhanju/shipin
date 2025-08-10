@@ -1,0 +1,19 @@
+{
+  "platform": "xhs",
+  "keywords": "编程,技术,Python",
+  "login_type": "qrcode",
+  "cookies": "",
+  "max_items": 50,
+  "enable_comments": true,
+  "max_comments": 10,
+  "enable_images": false,
+  "headless": false,
+  "save_login_state": true,
+  "user_data_dir": "./browser_data",
+  "save_format": "json",
+  "output_dir": "./data",
+  "enable_proxy": false,
+  "proxy_server": "",
+  "delay_between_requests": 1.0,
+  "delay_between_pages": 2.0
+}
