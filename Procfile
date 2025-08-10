@@ -1,1 +1,1 @@
-web: gunicorn MediaCrawler-main.webapp.app:app
+web: gunicorn MediaCrawler_main.webapp.app:app
