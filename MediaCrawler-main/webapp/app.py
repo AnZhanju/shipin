@@ -312,6 +312,8 @@ def download_file(filename):
     return redirect(url_for('static', filename=f'downloads/{filename}'))
 
 if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
     # 确保templates目录存在
     template_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'templates')
     os.makedirs(template_dir, exist_ok=True)
